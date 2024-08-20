@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${title}"></title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container mt-5">
+    <h2 th:text="${student.id != null ? 'Edit Student' : 'Add Student'}"></h2>
+    <form th:action="@{/saveStudent}" th:object="${student}" method="post">
+
+        <input type="hidden" th:if="${student.id != null}" th:name="id" th:value="${student.id}" />
+
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" th:field="*{name}" required maxlength="60">
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" th:field="*{email}" required>
+        </div>
+
+        <div class="form-group">
+            <label for="cell">Cell</label>
+            <input type="text" class="form-control" id="cell" th:field="*{cell}" required maxlength="11">
+        </div>
+
+        <div class="form-group">
+            <label for="gender">Gender</label>
+            <select class="form-control" id="gender" th:field="*{gender}">
+                <option value="" th:text="|Select Gender|"></option>
+                <option value="Male" th:text="|Male|"></option>
+                <option value="Female" th:text="|Female|"></option>
+                <option value="Other" th:text="|Other|"></option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="dateOfBirth">Date of Birth</label>
+            <input type="date" class="form-control" id="dateOfBirth" th:field="*{dateOfBirth}">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

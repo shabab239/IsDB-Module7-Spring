@@ -1,11 +1,17 @@
-package com.shabab.SecondSpringBoot.controller.entity;
+package com.shabab.SecondSpringBoot.student.entity;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-import java.util.Date;
+import java.sql.Date;
 
 @Entity
 @Table(name = "students")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Student {
 
     @Id
@@ -24,6 +30,7 @@ public class Student {
     private String gender;
 
     @Temporal(TemporalType.DATE)
-    private Date dateOfBirth;
+    private Date dateOfBirth; // java.sql.Date
+
 
 }

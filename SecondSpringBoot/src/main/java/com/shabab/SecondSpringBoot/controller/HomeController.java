@@ -11,7 +11,6 @@ public class HomeController {
         return "index";
     }
 
-
     @RequestMapping("/contact")
     public String contact() {
         return "contact";
