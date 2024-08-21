@@ -17,6 +17,7 @@ public class StudentController {
 
     @Autowired
     private StudentService studentService;
+
     @RequestMapping("/saveStudentForm")
     public String saveStudentForm(Model model) {
         model.addAttribute("title", "Add Student");
