@@ -1,12 +1,9 @@
-package com.shabab.SecondSpringBoot.faculty.entity;
+package com.shabab.UniversityManagementSystem.academy.model;
 
-import com.shabab.SecondSpringBoot.department.entity.Department;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.util.List;
 
 @Entity
 @AllArgsConstructor

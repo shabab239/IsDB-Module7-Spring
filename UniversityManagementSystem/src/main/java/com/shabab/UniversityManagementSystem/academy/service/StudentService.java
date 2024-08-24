@@ -1,4 +1,4 @@
-package com.shabab.SecondSpringBoot.student.service;
+package com.shabab.UniversityManagementSystem.academy.service;
 
 
 import com.shabab.SecondSpringBoot.department.entity.Department;

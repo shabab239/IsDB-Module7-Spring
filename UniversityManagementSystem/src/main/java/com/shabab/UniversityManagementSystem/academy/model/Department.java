@@ -1,19 +1,16 @@
-package com.shabab.SecondSpringBoot.faculty.entity;
+package com.shabab.UniversityManagementSystem.academy.model;
 
-import com.shabab.SecondSpringBoot.department.entity.Department;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
-
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@Table(name = "faculties")
-public class Faculty {
+@Table(name = "departments")
+public class Department {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,10 +19,8 @@ public class Faculty {
     @Column(nullable = false, unique = true, length = 100)
     private String name;
 
-    @Column(unique = true, length = 100)
-    private String email;
-
-    @Column(nullable = false, unique = true, length = 11)
-    private String contact;
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name="faculty_id")
+    private Faculty faculty;
 
 }

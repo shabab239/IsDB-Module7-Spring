@@ -1,7 +1,5 @@
-package com.shabab.SecondSpringBoot.student.entity;
+package com.shabab.UniversityManagementSystem.academy.model;
 
-import com.shabab.SecondSpringBoot.department.entity.Department;
-import com.shabab.SecondSpringBoot.faculty.entity.Faculty;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;

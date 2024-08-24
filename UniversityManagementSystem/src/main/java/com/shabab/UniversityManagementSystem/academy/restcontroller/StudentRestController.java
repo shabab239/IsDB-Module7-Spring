@@ -1,4 +1,4 @@
-package com.shabab.SecondSpringBoot.student.restController;
+package com.shabab.UniversityManagementSystem.academy.restcontroller;
 
 import com.shabab.SecondSpringBoot.student.entity.Student;
 import com.shabab.SecondSpringBoot.student.service.StudentService;
